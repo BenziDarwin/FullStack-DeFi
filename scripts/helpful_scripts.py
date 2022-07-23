@@ -1,4 +1,3 @@
-from eth_typing import ContractName
 from brownie import (
     accounts,
     network,
@@ -69,7 +68,7 @@ def deploy_mock(name):
     if name == "weth_token":
         weth = MockWETH.deploy({"from": account})
         return weth
-    if name == "mockV3Aggregator":
+    if name == "eth_usd_price_feed" or name == "dai_usd_price_feed":
         aggregator = MockV3Aggregator.deploy(decimals, initialValue, {"from": account})
         return aggregator
 

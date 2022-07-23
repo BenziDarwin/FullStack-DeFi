@@ -1,9 +1,9 @@
-//stake tokens - DONE!
+//stake tokens
 //unstake tokens
-//issue tokens - DONE!
-//add allowed tokens - DONE!
-// get ETH value - DONE!
-// check the number of users who have ever used the app. - DONE!
+//issue tokens
+//add allowed tokens
+// get ETH value
+// check the number of users who have ever used the app.
 //SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
@@ -40,7 +40,7 @@ contract TokenFarm is Ownable {
         ) {
             address recipient = stakers[stakersIndex];
             uint256 userTotalValue = getUserTotalValue(recipient);
-            dappToken.transfer(recipient, userTotalValue / 2);
+            dappToken.transfer(recipient, userTotalValue);
             //Send them a token reward based on their total value locked.
         }
     }
